@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import SearchBar from "./components/SearchBar";
+import apiAxios from './apiAxios';
+import ImagList from './components/ImagesList';
+import './css/styles.css';
 
 function App() {
+
+  const [images, setImages] = useState([])
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async (term = 'dog') => {
+    setLoading(true)
+    let result = await apiAxios(term)
+      .catch(error => console.error(error))
+      .finally(() => setLoading(false))
+
+    setImages(result)
+  }
+
+  useEffect(() => {
+    handleSubmit()
+  }, [])
+
+  if (loading) {
+    return <p style={{ textAlign: 'center', marginTop: '3rem' }}>Cargando...</p>
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <SearchBar enSubmit={handleSubmit} />
+      <ImagList images={images} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
