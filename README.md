@@ -80,4 +80,5 @@ El usuario puede ingresar la palabra que desea buscar en la caja del buscador y 
 ## Instalaciones
 
 Biblioteca Axion
-$ npm install axios
+
+`$ npm install axios`
