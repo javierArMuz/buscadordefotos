@@ -63,7 +63,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 ### Deployment
 
-(https://javierarmuz.github.io/buscadordefotos)
+https://javierarmuz.github.io/buscadordefotos
 
 ### `npm run build` fails to minify
 
