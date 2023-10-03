@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import SearchBar from "./components/SearchBar";
+import SearchBar from "./components/SearchBar/SearchBar";
 import apiAxios from './apiAxios';
-import ImagList from './components/ImagesList';
+import ImagList from './components/ImagesList/ImagesList';
 import './css/styles.css';
 
 function App() {

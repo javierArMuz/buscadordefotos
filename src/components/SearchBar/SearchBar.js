@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './SearchBar.css'
 
 function SearchBar({ enSubmit }) {
 
@@ -6,7 +7,7 @@ function SearchBar({ enSubmit }) {
 
   const handleForm = (e) => {
     e.preventDefault();
-    enSubmit(valueChange);
+    valueChange && enSubmit(valueChange);
   }
 
   const handleChange = e => setValueChange(e.target.value)

@@ -1,0 +1,53 @@
+.form {
+  text-align: center;
+  padding-top: .6rem;
+  border-bottom: 6px solid #497a48;
+  margin-bottom: 1.5rem;
+  background: #79AC78;
+
+  & h1 {
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+  }
+
+  & button,
+  & input {
+    border: none;
+    line-height: 2.4;
+    background: #F1EFEF;
+    font-size: 1rem;
+    padding: 0 .8rem;
+    outline: none;
+  }
+
+  & input {
+    border-radius: 10px 0 0 10px;
+    margin: 1rem 0;
+    width: 192px;
+  }
+
+  & button {
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+  }
+
+  & button:hover {
+    background: rgb(202, 201, 201);
+  }
+}
+
+
+/* ======= mediaQuery ======= */
+@media (width > 500px) {
+  .form h1 {
+    letter-spacing: .3rem;
+  }
+}
+
+@media (width > 800px) {
+  .form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

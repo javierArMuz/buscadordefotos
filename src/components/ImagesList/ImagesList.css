@@ -1,0 +1,33 @@
+.images {
+  padding: 0 .5rem;
+  columns: 1;
+  gap: 5px;
+
+  & img {
+    object-fit: cover;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+  }
+}
+
+/* ======= mediaQuery ======= */
+@media (width > 350px) {
+  .images {
+    columns: 2;
+    gap: 10px;
+  }
+}
+
+@media (width > 500px) {
+  .images {
+    columns: 3;
+  }
+}
+
+@media (width > 800px) {
+  .images {
+    columns: 4;
+  }
+}
