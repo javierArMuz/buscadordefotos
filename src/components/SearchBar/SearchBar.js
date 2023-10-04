@@ -15,11 +15,13 @@ function SearchBar({ enSubmit }) {
   return (
     <div className='form'>
       <h1>Buscador de Fotos</h1>
+      <search>
       <form onSubmit={handleForm}>
         <input maxLength={20} value={valueChange}
           onChange={handleChange} placeholder='ej: Perros' />
         <button>Buscar</button>
       </form>
+      </search>      
     </div>
   )
 }
