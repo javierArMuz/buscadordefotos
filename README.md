@@ -46,8 +46,9 @@ El usuario puede ingresar la palabra que desea buscar en la caja del buscador y 
 
 Biblioteca Axion
 
+`$ npm install axios`
+
 ## Deployment
 
 [buscadordefotos](https://javierarmuz.github.io/buscadordefotos)
 
-`$ npm install axios`
